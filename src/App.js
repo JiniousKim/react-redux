@@ -1,14 +1,14 @@
 import React from 'react'
-import { createStore } from 'redux'
-import rootReducer from './Modules'
-
-const store = createStore(rootReducer)
-window.console.log(store.getState())
+import AddNumberRoot from './Components/AddNumberRoot'
+import DisplayNumberRoot from './Components/DisplayNumberRoot'
+import './App.css'
 
 function App() {
   return (
-    <div>
-      <h1>Hello World</h1>
+    <div className="App">
+      <h1>Root</h1>
+      <AddNumberRoot />
+      <DisplayNumberRoot />
     </div>
   )
 }
