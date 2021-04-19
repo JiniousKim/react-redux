@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import RealDisplay from './RealDisplay'
 
-function DisplayNumber(displayNumber) {
-  const { number } = displayNumber
+function DisplayNumber({ number }) {
+  const [initNumber] = useState(number)
+
   return (
     <div>
       <h1>Display Number</h1>
-      <input value={number.number} readOnly />
-      <RealDisplay number={number.number} />
+      <input value={initNumber} readOnly />
+      <RealDisplay number={initNumber} />
     </div>
   )
 }

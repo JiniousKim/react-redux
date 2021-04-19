@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import DisplayNumber from './DisplayNumber'
 
 function DisplayNumberRoot({ number }) {
-  const [initNumber] = useState(number)
+  const initNumber = useState(number)[0]
 
   return (
     <div>

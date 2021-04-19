@@ -8,12 +8,11 @@ const state = {
 }
 
 function App() {
-  window.console.log(state.number)
   return (
     <div className="App">
       <h1>Root</h1>
-      <AddNumberRoot />
-      <DisplayNumberRoot number={state} />
+      <AddNumberRoot number={state.number} />
+      <DisplayNumberRoot number={state.number} />
     </div>
   )
 }
