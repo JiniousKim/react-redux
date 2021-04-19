@@ -1,13 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import DisplayNumber from './DisplayNumber'
 
-function DisplayNumberRoot({ number }) {
-  const initNumber = useState(number)[0]
-
+function DisplayNumberRoot() {
   return (
     <div>
       <h1>Display Number Root</h1>
-      <DisplayNumber number={initNumber} />
+      <DisplayNumber />
     </div>
   )
 }
