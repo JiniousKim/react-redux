@@ -1,17 +1,20 @@
 import React, { useState } from 'react'
+import store from '../store'
 
-function AddNumber(props) {
-  const intiProp = props
-  const number = useState(intiProp.number)
-  const [initNumber, setNumber] = number
-
-  const getNumber = (event) => {
-    setNumber(event.target.value)
-  }
+function AddNumber() {
+  const [initNumber, setNumber] = useState(store.getState().number)
 
   const toUpperComponent = () => {
-    props.onClickValue(initNumber)
+    store.dispatch({ type: 'INCREMENT', size: initNumber })
   }
+
+  const getNumber = (number) => {
+    setNumber(Number(number.target.value))
+  }
+
+  store.subscribe(() => {
+    setNumber(store.getState().number)
+  })
 
   return (
     <div>
