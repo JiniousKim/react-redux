@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import store from '../store'
 
-function AddNumber() {
-  const [initNumber, setNumber] = useState(store.getState().number)
+function AddNumber(props) {
+  const [initNumber, setNumber] = useState(0)
 
   const toUpperComponent = () => {
-    store.dispatch({ type: 'INCREMENT', size: initNumber })
+    props.onClick(initNumber)
   }
 
   const getNumber = (number) => {

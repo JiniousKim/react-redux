@@ -1,6 +1,6 @@
 import React from 'react'
-import AddNumberRoot from './Components/AddNumberRoot'
-import DisplayNumberRoot from './Components/DisplayNumberRoot'
+import AddNumberRoot from './components/AddNumberRoot'
+import DisplayNumberRoot from './components/DisplayNumberRoot'
 import './App.css'
 
 function App() {
