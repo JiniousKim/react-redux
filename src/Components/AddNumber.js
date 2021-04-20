@@ -12,10 +12,6 @@ function AddNumber() {
     setNumber(Number(number.target.value))
   }
 
-  store.subscribe(() => {
-    setNumber(store.getState().number)
-  })
-
   return (
     <div>
       <h1>Add Number</h1>
