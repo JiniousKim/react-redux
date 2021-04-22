@@ -1,11 +1,13 @@
-import React from 'react'
+import { connect } from 'react-redux'
 import AddNumber from '../components/AddNumber'
-import store from '../store'
 
-export default function AddNumberContainer() {
-  const toUpperComponent = (size) => {
-    store.dispatch({ type: 'INCREMENT', size })
-  }
+export default connect()(AddNumber)
 
-  return <AddNumber onClick={toUpperComponent} />
-}
+// import store from '../store'
+// export default function AddNumberContainer() {
+//   const toUpperComponent = (size) => {
+//     store.dispatch({ type: 'INCREMENT', size })
+//   }
+//
+//   return <AddNumber onClick={toUpperComponent} />
+// }

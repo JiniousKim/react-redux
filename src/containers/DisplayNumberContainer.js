@@ -1,5 +1,10 @@
-import React, { useState } from 'react'
+import { connect } from 'react-redux'
 import DisplayNumber from '../components/DisplayNumber'
+
+export default connect()(DisplayNumber)
+
+/*
+import React, { useState } from 'react'
 import store from '../store'
 
 function DisplayNumberContainer() {
@@ -12,3 +17,4 @@ function DisplayNumberContainer() {
 }
 
 export default DisplayNumberContainer
+*/
