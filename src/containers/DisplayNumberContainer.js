@@ -1,7 +1,17 @@
 import { connect } from 'react-redux'
 import DisplayNumber from '../components/DisplayNumber'
 
-export default connect()(DisplayNumber)
+// state 값은 redux state 값이 전달 된다.
+const mapReduxStateToReactProps = (state) => ({
+  number: state.number,
+})
+
+const mapReduxDispatchToReactProps = () => ({})
+
+export default connect(
+  mapReduxStateToReactProps,
+  mapReduxDispatchToReactProps,
+)(DisplayNumber)
 
 /*
 import React, { useState } from 'react'
