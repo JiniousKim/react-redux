@@ -6,12 +6,7 @@ const mapReduxStateToReactProps = (state) => ({
   number: state.number,
 })
 
-const mapReduxDispatchToReactProps = () => ({})
-
-export default connect(
-  mapReduxStateToReactProps,
-  mapReduxDispatchToReactProps,
-)(DisplayNumber)
+export default connect(mapReduxStateToReactProps)(DisplayNumber)
 
 /*
 import React, { useState } from 'react'
